@@ -1,0 +1,59 @@
+Question 1:
+voir C_O5.c
+
+Question 2:
+(1) : short -> 13
+(2) : short -> 66
+(3) : short -> 75
+(4) : short -> 160
+(5) : long  -> 132
+(6) : double -> 132.5
+
+Quetion 3:
+voir taille.c
+
+Question 4:
+Un cast est le changement de type d'une variable.
+Dans l'exemple, a est un int. Mais on peut le transformer en float avec le cast
+Si on faisait cela dans le sens contraire, on perdrait de l'information, c'est le risque du cast
+
+Question 5:
+2 147 412 111 : long
+3 294 957 194 : long long
+-2 000 000 000 : long
+
+Question 6:
+voir C_05.c
+
+Question 7:
+Il y a 2 façons de définir un nouveau type.
+
+Avec un enum, on créé un type qui peut prendre certaines valeurs, décidées à l'avance:
+Ex:
+        enum reponse {VRAI, FAUX, VIDE};
+        // Alors on initialise une variable de type réponse ainsi :
+        enum reponse ma_variable = FAUX;
+
+Avec un struct, on créé un type ayant plusieurs champs à renseigner, chaque champ ayant son propre type.
+Ex:
+        struct personne {
+               char[50] nom;
+               int age;
+               int code_postal;
+        }
+        // Et on modifie/accède aux valeurs ainsi :
+        personne bob;
+        bob.nom = "Bob";
+        bob.age = 31;
+        bob.code_postal = 69300;
+
+Question 8:
+voir C_O5.c
+
+Question 9:
+voir C_05.c
+
+Question 10:
+Le type enum pour les jours de la semaine est plus qu'inutile et perturant. Comme on ne peut pas juste print la valeur d'un enum (qui est un unsigned int), on doit écrire 20 lignes de code plutôt que juste 7...
+
+        

@@ -1,0 +1,66 @@
+Fiche Erlang 002
+
+Question 1
+
+a.
+Objets existants en Erlang :
+- Entiers
+- Flotants
+- Listes (contient les chaines de caractere)
+- Tuples
+- Atomes
+
+b.
+-Entiers : Variable = 42.
+-Flotants : Variable = 42.31415.
+-Listes : Variable = [1, 2, 3]. ou Variable = "Bonjour". pour des chaines de caractère. Stockées comme une liste de nombres (valeur ASCII de caque caractère)
+-Tuples : Variable = {1, 2, "Bonjour", {"unTuple"} }.
+-Atomes : Variable = bonjour.
+
+c.
+Pour representer des nombres en base autre que 10 dans Erlang, le plus simple est d'utiliser l'écriture Base#Valeur.
+Ainsi, 2#10100101. renvoit 165.
+et 16#A42. renvoit 2626.
+
+d.
+Un atomique peut contenir des espaces si on le déclare de la manière suivante :
+Atomic = 'nom avec des espaces'.
+
+e.
+Un atomique ce peur peut pas commencer par une majuscule
+
+f.
+Une liste peut contenir des éléments de type différents.
+Ainsi, L = [14, "Bonjour", {1,2,3}]. définit parfaitement L.
+
+Question 2.
+a.
+-module(filtrage)  %  Définition du module
+−export ( [fibo/1,fibo/2 ,sum/1]). % Liste des fonctions utilisables de l'extérieur : une fibo avec 1 argument, une fibo avec 2 arguments, et une sum avec 1 argument.
+
+fibo(X) when X < 2 −> 1 ; %Définition classique d'une suite de fibonacci. Filtrage sur le X <2 pour détecter les cas d'arrêt
+fibo(X) −> fibo(X−1) + fibo(X−2). % Cas d'appel récursif. Pas de nouveau filtrage car si cette instruction est lue c'est que la ligne précédente n'a pas été appliquée, donc que X >= 2.
+
+% Nouvelle fonction. Même si elles ont le même nom, le nombre d'argument fait partie de la définition d'une fonction. Donc fibo/1 n'est pas la même fonction que fibo/2/
+
+fibo(0, {U, _}) -> U; % Nouvelle fonction où l'utilisateur choisit les termes U0 et U1 de sa suite. Donc, nouveaux cas d'arrêt. Le _ signifie qu'on ne s'intéresse pas à ce qui est présent à cet endroit des arguments : pour renvoyer U0, pas besoin de noter la valeur de U1 
+fibo(1, {_, V}) −> V; % Idem
+fibo(X, Init) −> fibo(X−1, Init) + fibo(X−2, Init). % Appel récursif classique sur fibo/2
+
+% Fonction sum est habituellement avec 1 seul argument, c'est donc celle qui sera dans le export. Mais pour créer cette fonction on a besoin d'une fonction avec 2 arguments qui sera appelée recursivement. Donc on cérr sum/2. Qui ne sera pas exportée car elle n'est utile que pour la fabrication de sum/1
+sum (L) −> sum (L,0). % sum/1 appelle sum/2
+
+% Définition classique d'une fonction somme. 
+sum ([],S) −> S ;
+sum ([H| T] , S ) −> sum (T, H+S ) . % [H|T] enregistre le premier élément de la liste dans H, et la liste du reste dans T. Le cas où la liste est vide est déja filtré avant, donc en lisant cela, on sait qu'il y a un élément.
+
+
+Les fonctions sont dans le fichier exo.erl
+
+
+
+
+Question 3.
+Idées intéressantes à aborder :
+ - Séquences Guard (Qui ont posé problème... et qui empêchent aussi de faire de simples boucles if). Aborder les différentes boucles et ce qu'on a le droit ou non de mettre en parametre.
+

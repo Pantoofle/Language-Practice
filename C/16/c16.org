@@ -1,0 +1,24 @@
+* Question 1
+J'avoue, je n'y ai rien compris. Mais vu les lettres présentes et certaines lignes, 
+dont le getchar et le gets, me font penser que ce sera un convertisseur de chiffres romains.
+Et comme le printf s'applique à une chaine de caracteres, je pense que ce sera un convertisseur 
+decimal -> chiffres romains.
+
+
+* Question 2
+Gagné ! Mais j'avoue que le code en lui même...
+
+* Question 3 
+** 1
+C'est un Avion !
+** 2
+Une fille !
+
+* Question 4
+Ca pourrait être une bonne idée de donner le fichier .c
+Pour ma part le plus dur aura été de debugger tous les symbols qui sont mal passés au  
+copier coller à partir du pdf. Les *, les -, les ", les ' etc...
+Et comme le copier coller ajoute des espaces partout, c'était une vraie plaie à avoir quelque chose
+accepté par le compilateur
+
+Je joins ma version compilable dans la dropbox

@@ -1,0 +1,29 @@
+Q1.
+Le point virgule signifie la fin d'une instruction dans un block.
+Les acolades définissent le début et la fin d'un bloc
+
+Q2.
+Le main() est la fonction qui sera appelée lors de la compilation et l'execution du programme
+
+Q3.
+Structure d'une fonction
+
+<Type renvoyé> <Nom> ( <Arguments> )
+{
+        <Contenu...> ;
+        <Autre contenu> ;
+        
+        return <varyable à renvoyer>;
+}
+
+
+Q4. voir fichier.c
+
+Q5.
+Le saut de ligne n'a aucun impact
+
+Q6.
+Une variable n'est accessible que dans le bloc où elle a été définie. Donc déclarer une variable hors d'un bloc la rend accessible dans les autres blocs, mais la déclarer dans un bloc la rend inaccessible une fois sorti du block
+
+Q6.
+RAS

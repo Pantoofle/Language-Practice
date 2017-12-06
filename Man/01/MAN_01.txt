@@ -1,0 +1,37 @@
+Question 1.
+
+Un man peut contenir les sections
+NOM, SYNOPSIS, CONFIGURATION, DESCRIPTION, OPTIONS, CODE DE RETOUR, VALEUR RENVOYÉE, ERREURS, ENVIRONNEMENT, FICHIERS,  VERSIONS, CONFORMITÉ, NOTES, BOGUES, EXEMPLE, AUTEURS et VOIR AUSSI.
+
+
+Question 2.
+
+Pour effectuer une recherche de terme, on entre
+$ / <mot à chercher>
+Cela surligne toutes les occurences
+Pour déplacer l'écran à la suivante, on appuie sur 'n'
+
+Question 3 - 4.
+Si on spécifie un numéro à man, il affiche uniquement la fonction d'une certaine section. Avec
+1. Programmes du shell GNU
+2. Fonctions noyau
+3. Fonctions de la bibliothèque C
+4. Fichiers spéciaux
+5. Formats
+6. Jeux
+7. Divers
+8. Commande root
+9. Sous programmes du noyau
+
+donc
+$ man 1 printf
+renvoit la page de la fonction printf du shell
+et
+$ man 3 printf
+renvoit celle de la bibliothèque de fonctions de C
+
+Question 5.
+Pour rechercher dans toutes les sections, il faut ajouter l'option -a (pour --all).
+
+Question 6.
+RAS

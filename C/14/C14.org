@@ -1,0 +1,20 @@
+* Question 3
+Pour écrire du code multi-plateforme, il faut faire des includes différents selon la plateforme
+et donc des appels de fonction différentes. 
+On utilise les objets définis de base dans le processeur pour déterminer l'OS utilisé
+
+Donc le code va avoir la structure suivante:
+
+#ifdef _WIN32
+
+#include<windows.h>
+<Code windows...>
+
+#else 
+#include<unistd.h>
+<Code Apple ...>
+
+#endif
+
+* Question 5 
+RAS

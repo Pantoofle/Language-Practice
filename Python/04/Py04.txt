@@ -1,0 +1,12 @@
+Question 2
+int() convertit une valeur en un entier signé. Exemple : int("63") = 63
+str() convertit une valeur en une chaine de caracteres : Exemple : str(42) = "42"
+
+repr() transforme une valeur en sa représentation litérale, telle qu'elle pourrait être entrée à la main.
+Par exemple : repr('Bonjour') = "'Bonjour'".
+C'est donc la chaine de caractere contenant 'Bonjour', la valeur qu'on lui a demandé de representer
+Au contraire, str essaye de convertir un objet en une chaine de caracteres.
+Donc str("Bonjour") = "Bonjour"
+
+Question 5 :
+RAS

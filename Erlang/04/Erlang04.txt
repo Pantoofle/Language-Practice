@@ -1,0 +1,36 @@
+Question 1.
+a.
+Ces identifiants permettent de communiquer avec le thread à partir de tout thread créé dans le même thread.
+Dans la fiche précédente, on créait les threads secondaire à partir du thread principal d'Erlang : celui du shell.
+Donc, si on ouuvre un autre shell Erlang, on a pas accès aux threads définis dans le premier uniquement avec leur ID.
+
+b.
+Une application distribuée doit pouvoir communiquer avec le reste du système, et même avec d'autres machines dansle cas d'un logiciel de chat. Or, pour pouvoir échanger, l'ID du thread ne suffit pas cat il est défini uniquement dans le thread principal qui l'a appelé.
+
+Question 2.
+a.
+node/0 renvoit l'adresse du node local. COntrairement au thread, le node peut être rendu visible et accessible de l'extérieur.
+
+b. Pour que node/0 donne bien l'adresse du node serveur, il faut le nommer au lancement du shell d'Erlang.
+Avec la commande
+$ erl -name server@<mon_ip>.
+
+c. La fonction register/2 sert à donner un nom à un thread. Cette focntion associe un nom de type Atom, à un PID.
+L'appel au thread se fait alors de la même façon, mais avec le nom :
+
+PID = spawn(exo03, pong, []).
+register(ThreadPong, PID).
+
+On peut alors appeler
+ThreadPong:"Bonjour".
+
+unregister(ThreadPong).
+Cette fonction supprime l'association PID/Atom de l'Atom donné.
+
+Un thread enregistré sera alors accessible de l'extérieur
+
+Pour envoyer un message à une machine distante, on doit :
+- Sur le serveur, enregistrer le thread souhaité.
+- Sur le client, envoyer le message, en spécifiant le node sur lequel est le thread.
+  On appelle donc {thread_enregistré, 'server@<IP>'} ! <Message>.
+

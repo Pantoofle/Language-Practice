@@ -1,0 +1,43 @@
+Question 1.
+Le C a été créé par Dennis Ritchie et Ken Thompson, avec les Laboratoires Bell, en 1972
+Et c'est Brian Kernighan qui l'a rendu populaire
+Le K&R-C vient de Kernighan & Ritchie, et fait référence à cette version de C datant de 1972
+
+Puis, en 1983, l'ANSI, l'institut de normalisation americain, propose une nouvelle version de C, plus "normalisée", c'est celle qui sera ensuite utilisée. On l'appelera le C-ANSI
+
+
+Question 2.
+
+Codes testés :
+https://github.com/buckyroberts/Source-Code-from-Tutorials/blob/master/C/07_cProgramming.c
+https://github.com/buckyroberts/Source-Code-from-Tutorials/blob/master/C/15_cProgramming.c
+https://github.com/hc0d3r/C/blob/master/url-parser.c
+
+Commandes utilisées :
+$ gcc prog1.c
+$ ./a.out
+
+OU
+
+$ gcc -o prog1 prog1.C
+$ ./ prog1
+
+
+
+Question 3.
+Idem que pour la question 2
+
+Pour le 2e programme, il manquait une ) et un ; ligne 69, je l'ai donc rajouté.
+Puis lors de l'execution du a.out, le terminal demande parfois des entrées. On répond donc aux questions en entrant la réponse et appuyant sur Entrée...
+
+Question 4.
+-o file : permet de créer le fichier de sortie, de nom file, choisi, plutôt que a.out
+-I <chemin> : demande à l'interpreteur de chercher des fichiers headers (.h) dans le dossier indiqué.
+-L <chemin> : idem, mais avec des libraies, (bibliothèques)
+-Wall : demande à gcc d'afficher toutes les erreurs de compilation, même les mineures, ne dérangeant pas la compilation.
+-E : Fait uniquement l'étape de pré-processing
+-D : Créé une macro de lancement
+
+Question 6.
+RAS
+

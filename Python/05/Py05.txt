@@ -1,0 +1,13 @@
+* Question 1
+Voir Py05.py
+
+* Question 2
+Une expression conditionnelle est une expression valant une certaine valeur si une condition est respectée, et une autre dans l'autre cas. C'est bien une prise de valeur, et non l'execution de lignes, comme dans le cas d'un if avec une expression booléenne
+
+* Question 3
+a or b and c renverra (a or (b and c))
+L'ordre de priorité est
+OR < AND < NOT
+
+* Question 4
+RAS

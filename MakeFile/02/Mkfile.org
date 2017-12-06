@@ -1,0 +1,60 @@
+* Variables
+** Question 1
+Une variable est déclarée de manière classique :
+<nom> = <valeur>
+Et en début de fichier Makefile
+On y accede avec $(<nom>)
+
+*** Exemple :
+chemin = /home/usr/
+prog :
+gcc $(chemin)fichier.c 
+
+** Question 2
+| Variable | Valeur | Role                             |
+|----------+--------+----------------------------------|
+| AR       | ar     | Prog de gestion des archives     |
+| CC       | cc     | Prog de compilation de C         |
+| CXX      | g++    | Prog de compilation de C++       |
+| FC       | f77    | Prog de compilation de Fortran   |
+| RM       | rm -f  | Prog de suppression d'un fichier |
+ 
+| Variable | Valeur | Role                                                            |
+|----------+--------+-----------------------------------------------------------------|
+| ARFLAGS  | rv     | Options à passer à AR                                           |
+| CFLAGS   |        | Options à passer à CC                                           |
+| CXXFLAGS |        | Options à passer à CXX                                          |
+| LDFLAGS  |        | Options en plus à ajouter quand l'option ld de lien est appelée |
+| LDLIBS   |        | Idem, mais quand on link vers une ibrary                        |
+
+* Question 4
+** 1
+   Si on ajoute EXEC=ahoy, la variable est changée lors de l'execution
+** 2
+Si on voulait ajouter des options, on appelerait :
+make OPTIONS=<options à ajouter>
+en ajoutant au début du makefile :
+OPTIONS = 
+CXXFLAGS := $(CXXFLAGS) -Wall $(OPTIONS)
+
+** 
+=  définit une relation d'expansion. La définition sera recalculée à chaque fois.
+:= fait l'expansion UNE fois, et stocke le résultat. 
+
+Exemple :
+a = $(b)
+b = $(c)
+c = foo
+
+alors lors de l'appel de $(a), cela écrira $(b), qui sera réécrit en $(c) qui sera réécrit en foo.
+Alors que 
+
+b = foo
+a := $(b)
+
+lors de la définition de a, on "remplace" par a = foo.
+Dpc lors de l'appel de $(a), on a juste foo. Donc si b change entre temps, cela ne change rien
+
+* Question 5
+RAS
+

@@ -1,0 +1,17 @@
+* Quesiton 2
+** Exo 1
+Une rêgle d'inférence s'appique à tous les fichiers vérifiant la structure de la rêgle:
+%.o : %.c
+   $(CC) -o $@ -c $< $(CFLAGS)
+Cette regle va pouvoir s'appliquer à tous les fichiers .c du dossier, et permet de créer 
+leurs fichiers .o
+
+Cela permet de ne donner qu'une seule rêgle pour tous les fichiers qui se compilent de la meme façon
+
+Pour compiler les fichiers c++ :
+
+%.o: %.cpp
+   $(CXX) $(CXXFLAGS) -o $@ $<
+
+* Question 3 
+RAS

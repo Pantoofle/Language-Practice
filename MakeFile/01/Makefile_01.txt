@@ -1,0 +1,64 @@
+Question 1.
+Un Makefile est un fichier qui donne des règles de compilation à suivre pour un autre fichier.
+Par exemple, si un fichier .c est modifié, il doit être recompilé, et donc ses includes aussi, qui doivent en suite être liés ensemble pour fournir l'executable final. C'est un makefile qui liste toutes ces actions à faire et coordonne la nouvelle compilation
+
+
+Une rêgle est une instruction d'un makefile
+Elle a la forme :
+
+<cible> : <prérequis>
+         <actions à faire>\
+         <autre action>
+
+<cible> est le nom d'un fichier créé par un programme, sur lequel on va agir avec les rêgles. Ou un nom générique d'une action à effectuer (par exemple : edit ou clean)
+<prérequis> est la liste des fichiers à lancer pour obtenir <cible>
+<action> est ce qu'on va effecter sur <cible>, les commandes à lancer
+
+Question 2.
+: est utilisé pour séparer la <cible> de ses <prérequis>.
+On peut le traduire par :  Agis sur <cible> "Que tu obtiendras en lançant" <prérequis>
+
+La tabulation sert à définir à quel rêgle appartient <action>. De la même façon qu'en Python.
+
+target1 : <préreq>
+        <action 1 sur target1>
+        <action 2 sur target1>
+        target2 : <préreq>
+                <action 3 sur target2>
+                <action 4 sur target2>
+        <action 5 sur target1>
+
+Un commentaire s'écrit avec un #
+
+Question 3.
+
+
+Dans un makefile, chaque rêgle n'est appelée que si besoin, la rêgle all force la lecture et la création de tous les autres fichiers. Cela force la lecture de toutes les rêgles.
+Or si on écrit une rêgle c'est souvent qu'elle va servir, peut être en dehors de ce makefile mais elle servira. Alors l'appel de all assure que tous les fichiers nécessaires sont créés.
+
+
+Question 4.
+voir Makefile joint
+
+Quetion 5.
+Si on ne compile pas le programme avent, l'executable n'est pas créé, donc quand on lance make run, on essaye de lancer un programme inexistant
+
+Question 6.
+La première fois, make veut lancer all, donc ouvrir hello. Or hello n'est pas créé. Sa rêgle se lance donc. Mais pour cela il faut hello.o. donc on le lance. Il a besoin de hello.c, qui est fourni, donc hello.o se lance en premier, puis hello ayant tous ses arguments se lance, enfin, all peut s'execute.
+
+Si on réexecute make, il veut lancer all, qui demande la création de hello... qui a déjà été créé par le make précédent. Il n'y a donc rien à faire.
+
+Si on modifie hello.c entre temps, un nouveau make recompile hello.c pour fournir le bon hello.
+
+Si on n'avait pas rajouté la dépendance hello.c, le makefile n'aurait pas vérifié si hello.c avait changé, et aurait dit qu'il n'y a rien à faire, le hello ayant déjà été créé.
+La dépendance hello.c force le Makefile à vérifier si le hello.c est bien le même que la première fois, et permet donc de recompiler après une modification.
+
+Question 7.
+voir Makefile
+
+Question 8.
+.PHONY: clean mrproper
+signifie au Makefile que clean et mrproper ne sont pas des fichiers à créer, mais uniquement des rêgles à appeler. Ajouter cette ligne permet d'empêcher des confusions entre un fichier clean et la fonction clean qui supprime des fichiers.
+
+Question 9.
+RAS

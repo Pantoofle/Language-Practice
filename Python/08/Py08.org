@@ -1,0 +1,3 @@
+* Exo 1
+set('baccalaureat')
+renvoit un ensemble ou chaque lettre de baccalaureat n'est présente qu'une fois. Dans un ordre quelconque

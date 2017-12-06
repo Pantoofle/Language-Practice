@@ -1,0 +1,33 @@
+Question 2 :
+Complexité pire cas : O(n.log(n))
+Complexité meilleur cas : O(n)
+
+Question 3 :
+Si la liste a moins de 2 elements, cela renvoit la liste vide
+La fonction len est en complexité de O(1) : la taille de la structure est stockée dans une variable interne
+
+Question 4:
+
+l = [42, [5, 7], 9, 'abc']
+Définit la liste l
+
+l[1][1]-= 9
+Soustrait 9 au 7 de la 2e case de la liste contenue dans l. Donc après cette étape,
+l = [42, [5, -2], 9, 'abc']
+
+l[3] += 'd'
+Ajoute un 'd' à la fin de la chaine de caractère : l vaut alors
+l = [42, [5, 7], 9, 'abcd']
+
+
+Question 5:
+Prevision :
+p = []
+p += [p]  <=>  p = p + [p] <=>  p = [] + [[]]
+Donc p = [[]]
+
+Réalité : l = [[...]]
+Une sorte de liste de listes de listes etc..., et ce, à l'infini. Mais si on ajoute un élément, il s'ajoute uniquement au 1e "étage" de la liste
+
+Question 6
+RAS

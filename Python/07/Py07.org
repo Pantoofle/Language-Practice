@@ -1,0 +1,8 @@
+* Question 2
+** 2. Complexité spatiale
+Python 3 : range(0, n) en O(1) : C'est uniquement un constructeur
+Python 2 : range(0, n) en O(n) : C'est considéré comme une liste de taille n
+
+ 
+* Question 4
+RAS

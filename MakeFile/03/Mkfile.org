@@ -1,0 +1,20 @@
+* Raccourcis
+| Variable | Role                                                |
+|----------+-----------------------------------------------------|
+| $@       | Nom du fichier qu'on essaye de fabriquer            |
+| $<       | Nom du précurseur qui a appelé cette recette        |
+| $^       | Toutes les dépendances                              |
+| $?       | L'ensemble des dépendances plus jeunes que la cible |
+| $*       | Préfix commun de la cible et des dépendances        |
+|          |                                                     |
+
+* Exercice 3
+make :
+-> all
+-> hey
+-> hello.o
+-> $ g++ -Wall -c hello.c
+-> $ g++ -Wall -o hey hello.o
+
+* Exo 4
+RAS

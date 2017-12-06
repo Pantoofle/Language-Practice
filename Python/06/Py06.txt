@@ -1,0 +1,16 @@
+* Question 3
+** 1
+Dans une boucle ,
+Pass : Une instruction qui ne fait rien. Elle est lue mais ne fait rien
+Break : sort de la boucle , même si la condition de sortie n'est pas respectée
+Continue : passe à l'itération suivante de la boucle, sans lire la suite des instructions
+
+** 2
+S'il y a plusieurs boucles imbriquées, ces mots-clés s'appliquent à la boucle la pls proche, la dernière définie
+
+** 3
+Ajouter un else à un While (ou à un for) permet d'effectuer des actions quand la condition de boucle
+devient fausse. Donc si on en sort avec un break, on ne passe pas par ce block.
+
+* Question 4
+RAS

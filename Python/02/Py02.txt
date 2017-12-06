@@ -1,0 +1,23 @@
+## Question 1
+x = 2+2
+# 11 = 3*k + r
+# -> impossible de definir des elements dont les valeurs dépendent d'un calcul venant des autres
+y = 27**98 % 97
+
+## Question 2
+x = 'na'
+'Ba' + 2*x
+
+x = 'bon'
+"J'aime les " + x + ' ' + 2*x + 's'
+
+## Question 3
+test = "Ceci est une phrase de test !"
+1e lettre : test[0]
+2e lettre : test[1]
+Avant-dernière : test[-2]
+
+test[:11] + test[22:]
+
+## Question 4
+RAS

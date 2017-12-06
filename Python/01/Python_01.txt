@@ -1,0 +1,50 @@
+Question 1:
+"Python" vient du studio Monthy Python, studio à l'origine de l'excellent Sacré Graal, par exemple.
+
+Langage interprété :
+Avantage :
+         - Facilité de compréhension, modificaion, éctiture
+         - En cas de bug, on modifie la commande posant problème et on peut reprendre l'execution là où on en était, alors que pour un langage compilé, l'existence d'une erreur nécessite de tout recompiler
+
+Inconvénients :
+         - Compile bien plus lentement
+         - A besoin d'un interpréteur pour fonctionner, alors quq'un langage compilé créé un binary qui peut ensuite être distribué.
+
+En python, l'indentation sert à délimiter les blocks. Ainsi, un block commence par une augmentation de l'indentation et finit lorsque l'indentation rediminue.
+Exemple :
+<block>:
+     <instruction du block>
+     <autre instruction>
+     <Encore une>
+
+<Instruction HORS du block>
+<Block2>:
+     <Instruction du nouveau block>
+
+Python a 2 versions actuellement utilisées:
+Python2 et Python3. Python2 est plus ancien, et Python3 est une version améliorée. Cependant, cette amélioration était telle que tout ce qui marche sous python3 ne marche pas forcément sous Python2, et vice-versa
+Python3 se développe de plus en plus, et Python2 est laissé de côté, mais pour être certain que le programme fonctionne, il faut savoir sur quelle version on travaille
+
+
+Question 2:
+
+Pour lancer python :
+$ python   -> version 2.7.12
+$ python3  -> version 3.5.2
+
+
+Question 3:
+Quitter l'interpreteur :
+Lancer quit() ou exit()
+
+Question 4:
+Pour lancer un script python avec ./yay.py il faut
+- Donner la permission d'executer : $ chmod +x yay.py
+- Expliquer au fichier quoi utiliser : rajouter      #! /usr/bin/env python3        en première ligne
+Résultat affiché :
+$ ./yay.py
+Yay !
+
+
+Question 5:
+RAS

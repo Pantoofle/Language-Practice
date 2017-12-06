@@ -1,0 +1,9 @@
+En ajoutant des accolades autour de la boucle for, on limite la portée du i à ce block. Donc par la suite, on pourra de nouveau ajouter une boucle indicée par i.
+Donc on libère la variable i après l'avoir utilisée dans la boucle
+
+Problèmes :
+On perd la valeur de i une fois sorti. Donc pas possible de verifier si la boucle est bien allée jusqu'au bout ou si elle a été sortie de force par un break.
+
+
+Question 5.
+RAS

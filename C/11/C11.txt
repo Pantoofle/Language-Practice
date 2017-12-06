@@ -1,0 +1,28 @@
+Question 1
+On ne peut utiliser une fonction que si elle a été déclarée auparavant dans le programme.
+Ces trois methodes sont des facons de faire ces déclaratiuons dans le bon ordre
+
+- Une déclaration top-down définit les fonctions dans l'ordre logique d'écriture.
+  Exemple : on veut ecrire une fonction qui demande un nombre et renvoit la surface du disque de
+  rayon cette valeur. On écrit donc la fonction main. Puis on se rend compte qu'il nous faut une
+  fonction calculant la surface. On l'ajoute donc apres. Et dans cette fonction surface on se rend
+  compte qu'il nous faut une valeur de PI, on ecrit donc une nouvelle fonction à la suite. Le
+  probleme étant qu'elles sont écrites dans le mauvais ordre : une fonction est appelée avant d'être
+  définie.
+
+- Pour remedier à ce probleme, localement, avant l'appel de la fonction, on la définit. Pour que
+  le programme sache qu'on a écrit une fonction de tel type, mais dont le fonctionnement sera donné
+  après.
+
+- Ou alors on peut réorganiser les définitions pour définir PI, puis surface, puis main.
+  Comme cela, lorsqu'on aura besoin d'une fonction, elle aura déjà été définie.
+  C'est le bottom up, sans déclaration
+
+- Ou alors on écrit les fonctions dans l'ordre qu'on veut puis au début du programme, avant main
+  on définit toutes ces fonctions globalement, on indique qu'elles ont été écrites et qu'elles
+  seront expliquées plus tard
+
+
+Question 5
+Pourquoi demander une recursivité "naturelle" sur une structure de tableau lourde à envoyer de
+facon recursive quand une simple boucle for créé le tableau en 3 lignes ?

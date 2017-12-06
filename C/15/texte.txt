@@ -1,0 +1,3 @@
+Ceci est une phrase. Ceci est une autre phrase.
+Puis sur une autre ligne.
+Jusqu'a la fin.

@@ -1,0 +1,54 @@
+* Question 1
+
+|                 |  A | B | C | P1 | P2 |
+|-----------------+----+---+---+----+----|
+| Init            |  1 | 2 | 3 | /  | /  |
+| P1 = &A         |  1 | 2 | 3 | &A | /  |
+| P2 = &C         |  1 | 2 | 3 | &A | &C |
+| *P1 = *(P2)++   |  3 | 2 | 4 | &A | &C |
+| P1 = P2         |  3 | 2 | 4 | &C | &C |
+| P2 = &B         |  3 | 2 | 4 | &C | &B |
+| *P1 = *P2       |  3 | 2 | 2 | &C | &B |
+| ++*P2           |  3 | 3 | 2 | &C | &B |
+| *P1 *= *P2      |  3 | 3 | 6 | &C | &B |
+| A = ++*P2 * *P1 | 24 | 4 | 6 | &C | &B |
+| P1 = &A         | 24 | 4 | 6 | &A | &B |
+| *P2 = *P1/=*P2  |  6 | 4 | 6 | &A | &B |
+
+* Question 2
+Voir C12_2.c
+
+* Question 3
+Voir C12_3.c
+
+* Question 4
+** 1. Compréhension
+De haut à gauche vers en bas à gauche, en s'enroulant :
+- 1 : Père
+- 2 : Mère
+- 3 : Frère/Soeur via Père
+- 4 : Frère/Soeur via Mère
+- 5 : Un des enfants
+- 6 : Chaine générale
+
+** 2.Sexe du personnage
+Pas besoin de se souvenir du sexe de certains personnages, car s'ils sont la cible d'un pointeur
+Père/mère d'un autre personnage, on peut en déduire leur sexe.
+
+** 3. Chainage général
+Le chainage général sert à ne pas perdre des informations dans le cas où le personnage 
+n'est relié à aucun autre. Par exemple Jacques. Pour garder chaque personnage accessible,
+il faut donc faire une chaine générale qui permet de retrouver tout le monde.
+
+** 4. Chainages Cycliques
+Ce chainage cyclique permet de trouver tous les frères et soeurs juste en suivant la chaine 
+jusqu'à retomber sur le personnage de départ. Dans le cas d'une chaine non cyclique, pour trouver 
+les freres et soeurs d'un personnage, il faudrait chercher parmi tous les personnages, celui qui
+pointe vers la personne voulu, et de recommencer cela indéfiniment.
+Le cycle permet de faciliter la recherche d'un frere/soeur.
+
+** 5-6-7
+Voir C12_Q4.c
+
+* Question 5
+RAS

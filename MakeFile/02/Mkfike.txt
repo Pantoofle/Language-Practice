@@ -1,0 +1,11 @@
+* Variables
+Une variable est déclarée de manière classique :
+<nom> = <valeur>
+Et en début de fichier Makefile
+On y accede avec $(<nom>)
+
+Exemple :
+chemin = /home/usr/
+prog :
+     gcc $(chemin)fichier.c
+

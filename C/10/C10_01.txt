@@ -1,0 +1,12 @@
+Question 1:
+Il y a 3 branchements inconditionnels en C :
+break
+continue
+return
+
+Question 2:
+xxxxxx = continue
+yyyyyy = break
+
+Question 3:
+RAS

@@ -1,0 +1,87 @@
+Question 1.
+Un identificateur est un mot clé qui fait révérence à un autre élément du programme. Qui permet de l'appeler.
+
+Question 2.
+Variable/nom de fonction    -> OUI
+Contenir des chiffres       -> OUI, MAIS pas en premier caractère.
+Utiliser le _               -> OUI, même en premier caractère
+var est identiue à Var      -> NON, La casse entre en compte
+limitation en taille        -> Ca dépend...
+Selon la norme ANSI :
+Pour un identificateur à l'intérieur d'une fonction, limitation à 31 caractères. A 6 carac pour une variable externe
+
+Question 3.
+Mots clés ANSI C :
+auto    	double 	int     	long
+break   	else 	long    	switch
+case    	enum 	register 	typedef
+char    	extern 	return  	union
+const 	        float 	short 	        unsigned
+continue 	for 	signed 	        void
+default 	goto 	sizeof   	volatile
+do       	if 	static   	while
+
+Question 4.
+Définition de constantes :
+
+Soit en préprocessing, non typé  : #define <nom> <valeur>
+Ou alors dans une fonction, typé : const <type> <nom> = <valeur>;
+
+#define LONGUEUR 10
+
+int main(){
+
+    const char CARAC = 'c';
+
+    return 0;
+}
+
+Question 5.
+
+Représentation : Tableau de char. On peut donc écrire
+char mot[8] = {'B','o','n','j','o','u','r', '\0'};
+
+Carctère de fin de chaine : \0
+
+
+Question 6.
+
+Un opérateur est un symbole qui demande l'execution d'une fonction sur la/les variables.
+Types d'opérateur :
+-Arithméique (+, -, /, ++, %, ...)
+-De relation (==, >, <=, !=, ...)
+-Logiques (&&, ||, !, ...)
+-Bit-à-Bit (&, |, ^, ~, <<, ...)
+-Affectation (=, +=, *=, ...)
+-Autres (&, *, ...)
+
+1. x = 5, Y = 0
+2. x = 6, Y = 0
+3. x = 7, Y = 6
+4. x = 8, Y = 8
+
+Question 7.
+
+Le point-virgule signifie la fin d'une instruction dans un bloc délimité par des acolades (fonction, boucle, ...)
+
+Les accolades définissent un bloc. Devant ce bloc se situe une information sur comment et quand utiliser ce bloc.
+Par exemple, la boucle while :
+while (<condition>)
+{
+        *Action à effectuer tant que la condition est vraie*
+}
+
+Question 8.
+Commentaires :
+/* Commentaire */
+
+/* Commentaire
+*  sur
+*  plusieurs
+*/ lignes
+
+On ne peut donc pas entrer de commentaire en commentaire, car la balise */ fermerait l'espace commentaire alors que le 2e /* n'a rien ouvert car les commentaires ne sont pas lus.
+
+Question 9.
+RAS
+

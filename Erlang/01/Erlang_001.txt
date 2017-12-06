@@ -1,0 +1,76 @@
+Réponses aux questions de la fiche Erlang_001_introduction.fr.pdf
+
+##### Question 1 : #####
+##a.
+Pour afficher du texte à l'écran, on peut entrer directement le texte sous forme d'un objet string, noté entre guillemets.
+
+##b.
+Pour intégrer la valeur d'une variable avec la mise en forme voulue :
+
+io:fwrite("Variable souhaitée : ~w", [Variable]).
+
+Mais en faisant attention :
+~w affiche une sorte de variable.toString()
+Donc si var est une chaine de caracteres, elle sera affichée comme une liste de chiffres : le codage ASCII de la chaine.
+Pour une chaine, on remplace ~w par ~s
+~n est un retour à la ligne
+\n fonctionne aussi
+\t effectur une tabulation
+
+##### Question 2 : #####
+##a.
+Les noms de  variables doivent commencer par une majuscule. Pas de chiffre.
+Le seul caractere non alphanumérique accepté est le _ "underscore"
+
+##b.
+Le contenu n'est pas typé directement. Le typage est automatique lors de l'affectation d'une variable.
+Les chaines de caractère sont représentées sous la forme d'une liste d'entiers, le code ascii de chaque caractère.
+
+##### Question 3 : #####
+##a.
+Pour définir une fonction anonyme récursive, on créé une fonction auxiliaire, qui prendra en argument une fonction à appeler. L'argument étant juste une fonction, la définition de cette auxiliaire ne posera pas de problème.
+La fonction principale demandera alors à l'auxiliaire de s'appeler elle même. On a ainsi une récursivité.
+
+##b.
+Pour la fonction factorielle :
+Fact_aux = fun(Fonct, 0) -> 1;
+(Fonct, N) -> N*Fonct(Fonct, N-1) end.
+
+Factorielle = fun(N) -> Fact_aux(Fact_aux, N) end.
+
+##### Question 4 : #####
+##a.
+-module(helloworld) : Nomme le module qui contiendra les fonctions définies ensuite. C'est ce nom qui sera utilisé dans d'autres fichiers pour appeler les fonctions de ce module
+
+-export([main/0]) : Donne le nom des fonctions à rendre public, et des informations à leur sujet
+
+main() : Définition classique d'une fonction
+
+io:fwrite : appel de la fonction fwrite contenue dans le module io
+
+##b.
+Ligne 2, le /0 signifie que le fonction demande 0 arguments en entrée.
+Donc si on avait une fonction suplémentaire :
+
+somme (A, B) -> A + B.
+
+on aurait export([main/0, somme/2]).
+
+##c.
+Pour acceder à la fonction main depuis l'extérieur, il faut avoir compilé le module helloworld et ensuite appeler la fonction avec helloworld:main().
+
+##### Question 5 : #####
+Le module helloworld du document contient une seule fonction, main.
+Cependant, helloworld:module_info() nous apprend qu'il y en a en réalité 3 d'importées :
+main, module_info/0 et module_info/1
+
+##### Question 6 : #####
+erl appelle le programme erl installé
+-noshell applique une option à cet appel, en spécifiant de ne pas passer par le shell
+-s demande le lancement d'une fonction. Les paramètres suivants sont : le module, et la fonction du module
+helloworld est donc le module
+main est la fonction demandée, du module helloworld
+
+-s demande alors un nouvel appel de fonction
+init : cette fois dans le module init
+stop : fonction du module init qui demande au programme de s'arrêter.
